@@ -1,9 +1,4 @@
-Monthly mean sea levels with the average seasonal cycle removed.,
-The values are in meters relative to the most recent Mean Sea Level datum established by CO-OPS.,
-Column values are the Year; Month; Monthly Mean; Relative Sea Level Trend Line; Higher 95% Confidence Interval; and Lower 95% Confidence Interval.,
-Product of NOAAs National Ocean Service / Center for Operational Oceanographic Products and Services (CO-OPS),
-,
-date, value
+date,value
 1947,-0.493
 1948,-0.551
 1949,-0.523
