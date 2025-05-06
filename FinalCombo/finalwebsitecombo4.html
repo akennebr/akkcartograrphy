@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>The Living Environment - Coastal Landscapes</title>
+	<meta name="author" content="Matthew Howell" />
+	<meta name="description" content="fullPage continuous scrolling demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,scroll,loop,continuous" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+
+<ul id="menu">
+	<li data-menuanchor="firstPage" class="active"><a href="#firstPage">Introduction</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Sea Level Rise</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">Coastal Populations</a></li>
+    <li data-menuanchor="4thPage"><a href="#4thpage">Coastal Mangroves</a></li>
+</ul>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<h1>The Living World - Coastal Landscapes</h1>
+		<p>by Maerron, Berlin, and Asia</p>
+	</div>
+    
+    
+	<div class="section" id="section1">
+		<div class="intro">
+			<iframe id="project_1" src="https://akennebr.github.io/akkcartograrphy/akkviz9.html" height="800 px" width="90%" frameBorder="0" scrolling="no"></iframe>
+		</div>
+	</div>
+    
+    
+	<div class="section" id="section2">
+		<div class="intro">
+			<iframe id="project_2" src="https://mlovern.github.io/Coastal-Population-Changes/PopulationChangesLovern.html" height="800 px" width="90%" frameBorder="0" scrolling="no"></iframe>
+		</div>
+    </div>
+        
+    <div class="section" id="section3">
+		<div class="intro">
+			<iframe id="project_3" src="https://berlin-bohn.github.io/MangroveTrees/Mangrove%20Population%20Map-Berlin%20Bohn.html" height="800 px" width="90%" frameBorder="0" scrolling="auto"></iframe>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+      sectionsColor: ['#f0f8f5', '#f0f8f5', '#f0f8f5', '#f0f8f5', '#f0f8f5'],
+      anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+      menu: '#menu',
+      continuousVertical: true,
+      navigation: true,
+      afterLoad: function(origin, destination, direction, trigger){
+        console.log("afterLoad: destination:" + destination.index);
+      },
+      onLeave: function(origin, destination, direction, trigger){
+        console.log("onLeave: destination:" + destination.index);
+      },
+    });
+</script>
+
+</body>
+</html>
